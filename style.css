@@ -1,0 +1,224 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.indexBody{
+    background-image:url("img/body.jpg");
+    background-repeat:no-repeat;
+    background-size: 70%;
+    background-position:top;
+ 
+ 
+    
+    
+}
+/* TOP START  */
+header{
+    margin: 0px 0px 0 0px;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Glory', sans-serif;
+    background-color: #c4bff9;
+    padding: 10px;
+}
+.img-logo{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.search{
+    padding-top: 10px;
+    position: relative;
+ 
+}
+.searchBar{
+    width: 350px;
+    height: 30px;
+    border-radius: 20px;
+    border: none;
+   padding-left: 30px;
+    outline: none;
+}
+
+  
+  
+::placeholder{
+    padding-left: 5px;
+}
+
+.user{
+    padding-top:7px ;
+}
+.img-user{
+    width: 40px;  
+}
+/* TOP END  */
+
+/* LEFT SIDE START */
+.container-1{
+    display: flex;
+    justify-content: space-between;
+    background-color: #ca98ca;
+    margin-left: 10px;
+    text-decoration: none;
+}
+#leftSide{
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    background-color:  #ca98ca;
+    left: -200px;
+    transition: all 0.5s linear;
+
+}
+#leftSide.active{
+    left: 0;
+}
+#leftSide ul li{
+    list-style: none;
+    padding: 10px 10px;
+    border-bottom: 1px solid white;
+    cursor: pointer;
+    transition: all 0.5s linear;
+}
+#leftSide ul li:hover{
+    background-color: #c4bff9;
+}
+#leftSide ul a li {
+    color: white;
+    font-family: inherit;
+    font-size: 16px;
+    text-decoration-line: inherit;
+}
+.leftSideButton{
+    position: absolute;
+    left: 200px;
+    top: 0;
+    cursor: pointer;
+}
+.leftSideButton::before{
+    content: "\f0c9";
+    font-family: FontAwesome;
+    color: white;
+    position: absolute;
+    font-size: 28px;
+    background-color:#ca98ca ;
+    padding: 3px 10px;
+    transition: all 0.5s linear;
+}
+.leftSideButton:hover:before{
+    background-color: #c4bff9;
+}
+/* LEFT SIDE END */
+
+/* GALERİ START */
+.card-body{
+    width: 100vw;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background-color: #dadafe;
+    overflow: hidden;
+    grid-template-columns: auto auto auto;
+    
+}
+.card{
+    display: grid;
+    grid-template-columns: 220px;
+    grid-template-rows: 150px 150px 60px ;
+    grid-template-areas: "image" "text" "stats";
+    margin: 20px;
+
+    font-family: roboto;
+    border-radius: 18px;
+    background: honeydew;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+    text-align: center;
+
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+.card-image{
+    grid-area: "image";
+    background: url("https://picsum.photos/158/168");
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size: cover;
+}
+.card-text{
+    grid-area: "text";
+    margin: 25px;
+}
+
+.card-text p {
+    color:black;
+    font-size: 15px;
+    font-weight: 300;
+}
+.card-text h2 {
+    margin-top: 0px;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: blueviolet;
+
+}
+
+
+.card:hover{
+    transform: scale(1.2);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+}
+.form-body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 85vh;
+    overflow: hidden;
+}
+.form{
+      background-color: #ff89ab;
+    color: white;
+    padding: 100px;
+    font-family: 'Glory', sans-serif;
+    font-size: 16px;
+}
+.form-control{
+    margin: 4px;
+    position: relative;
+}
+.form-control input{
+    padding: 3px;
+    width: 100%;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    color: white;
+    font-size: 14px;
+}
+.form-control input[type="submit"]{
+    background-color: #b8b6ff
+    ;
+    border: 0;
+    margin-top: 3px;
+    padding: 7px ;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 300ms;
+    
+}
+.form-control input[type="submit"]:hover{
+    background-color: #807de6;
+}
+@media only screen and (max-width: 600px) {
+    
+        body .card-body{
+            
+            grid-template-columns: auto;
+            
+        }
+    }
