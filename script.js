@@ -23,7 +23,7 @@ addEventListener('submit', function(event){
 })
 const cardBody = document.querySelector('.card-body')
 console.log(cardBody)
-// let allData=[]
+let newData=[]
 fetch( 'https://jsonplaceholder.typicode.com/posts')
 .then(response=>response.json())
 .then(data=>{
@@ -33,7 +33,7 @@ fetch( 'https://jsonplaceholder.typicode.com/posts')
     //         allData.push(value)
     //     }
     // }),
-    const newData=data.slice(0,10)
+    newData=data.slice(0,10)
 
     card(newData)
 })
@@ -55,4 +55,19 @@ const card =(data) =>{
 
   }
   );
+}
+
+
+function myFunction(){
+   var input, filter;
+   input = document.getElementById("myInput");
+   filter = input.value.toUpperCase();
+   
+   const filteredData=newData.filter(item=>
+     item.title.toUpperCase().includes(filter) || item.body.toUpperCase().includes(filter) )
+   
+
+   cardBody.innerHTML=""
+   card(filteredData)
+   
 }
