@@ -12,7 +12,7 @@ JavaScript'te Fetch ile Json formatında 10 adet veri çekildi ve bu veriler car
 	
 <img
             class="img-readme"
-            src="img/Anasayfa.png"
+            src="img/Anasayfaa.png"
             alt=""
             srcset=""
           />
